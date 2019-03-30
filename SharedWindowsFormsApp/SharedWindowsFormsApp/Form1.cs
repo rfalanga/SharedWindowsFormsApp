@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySharedProject;
 
 namespace SharedWindowsFormsApp
 {
@@ -19,7 +13,9 @@ namespace SharedWindowsFormsApp
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            Employee employee = new Employee();
+            string result = employee.GetEmployeeDetail();
+            lblDetails.Text = result;
         }
     }
 }
